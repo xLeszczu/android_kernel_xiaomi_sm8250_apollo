@@ -1,0 +1,6 @@
+[submodule "KernelSU"]
+	path = KernelSU
+	url = https://github.com/Baka-SU/BakaSU
+[submodule "security/baseband-guard"]
+	path = security/baseband-guard
+	url = https://github.com/vc-teahouse/Baseband-guard
