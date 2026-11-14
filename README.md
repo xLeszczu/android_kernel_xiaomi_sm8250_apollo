@@ -7,8 +7,8 @@ branch `lineage-24.0` (base commit `6b34d2476`), with:
 | Component | Version | Notes |
 |-----------|---------|-------|
 | [BakaSU](https://github.com/Baka-SU/BakaSU) | `v4.2.0-rc3-516d3e87` | git submodule in `KernelSU/`, linked as `drivers/kernelsu`. |
-| [SUSFS](https://gitlab.com/simonpunk/susfs4ksu) | v2.3.0 (updated patch) | 4.19 patch + inline hooks from [JackA1ltman/NonGKI_Kernel_Build_2nd](https://github.com/JackA1ltman/NonGKI_Kernel_Build_2nd). Five hunks (`fs/namespace.c`, `fs/super.c`, `fs/proc/task_mmu.c`, `fs/Makefile`, `mm/memory.c`) were ported by hand because `lineage-24.0` has the newer `fs_context` mount code; updates to the patch were merged back onto the hand-ported files with a 3-way merge against a pristine `lineage-24.0` checkout. |
-| [NoMount](https://github.com/maxsteeel/nomount) | `dev` @ `dcdab8e` | copied into `fs/nomount/`, `CONFIG_NOMOUNT=y`. |
+| [SUSFS](https://gitlab.com/simonpunk/susfs4ksu) | v2.4.0 | 4.19 patch + inline hooks from [JackA1ltman/NonGKI_Kernel_Build_2nd](https://github.com/JackA1ltman/NonGKI_Kernel_Build_2nd). Five hunks (`fs/namespace.c`, `fs/super.c`, `fs/proc/task_mmu.c`, `fs/Makefile`, `mm/memory.c`) were ported by hand because `lineage-24.0` has the newer `fs_context` mount code; updates to the patch were merged back onto the hand-ported files with a 3-way merge against a pristine `lineage-24.0` checkout. |
+| [NoMount](https://github.com/maxsteeel/nomount) | `dev` @ `5e9feb6` (v2.3.0) | copied into `fs/nomount/`, `CONFIG_NOMOUNT=y`. |
 | [Baseband-guard](https://github.com/vc-teahouse/Baseband-guard) | `028ff7fd` | git submodule in `security/baseband-guard`. `CONFIG_BBG=y`, `BLOCK_BOOT`/`BLOCK_RECOVERY` left off: protects the baseband/modem and other non-OTA partitions, while boot/recovery/dtbo stay flashable from a booted system. |
 
 The first commit of this branch is the untouched LineageOS `lineage-24.0` tree; the second commit
